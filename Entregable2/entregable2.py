@@ -86,6 +86,7 @@ def crear_diccionario(g: UndirectedGraph):
     return  dic
 
 # Creamos un grafo leyendo un fichero
+
 def crear_grafo(filename: str) -> UndirectedGraph:
     text_file = open(filename)
     aristas = []
