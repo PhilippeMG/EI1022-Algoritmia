@@ -134,12 +134,12 @@ if __name__ == '__main__':
             algoritmo2(g)
             print("Algoritmo 2:\n {0}".format(tupla))
         #imprimimos resultados
-       # num_colores = tupla[0]
-       # dic = tupla[1]
-       #
-       #  print(num_colores)
-       #  for (k, v) in dic.items():
-       #      print(k[0], k[1], v)
+        num_colores = tupla[0]
+        dic = tupla[1]
+
+        print(num_colores)
+        for (k, v) in dic.items():
+            print(k[0], k[1], v)
 
         if len(sys.argv) == 4 and sys.argv[3] == "-g":
             # color_dic = {(-3, -2): 0, (0, 0): 1, (1, 1): 2}
