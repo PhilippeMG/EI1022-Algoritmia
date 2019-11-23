@@ -15,7 +15,7 @@ def factible(lista_palabras, dic, solucion):
                     return True
                 else: # La letra está en diccionario
                     suma += dic[palabra[-i]] # Suma columna
-        print("Col: {0}: {1}".format(i,suma))
+        #print("Col: {0}: {1}".format(i,suma))
         # Comprobar si suma es correcta
         suma += acarreo #Se suma el acarreo que puede ser cero.
         acarreo = 0 # Una vez se suma el acarreo, éste pasa a valer 0
@@ -29,6 +29,7 @@ def factible(lista_palabras, dic, solucion):
         sol.append(acarreo)
 
     sol.reverse()
+    print(dic)
     print(sol)
     # Recorremos la lista sol y comprobamos que cada elemento coincida con la solución, si algun elem no coincide -> False
 
