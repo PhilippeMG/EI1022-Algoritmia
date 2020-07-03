@@ -1,5 +1,5 @@
 """
-Version: 2.0 (22-oct-2018)
+Version: 2.0 (22.txt-oct-2018)
 
 @author: David Llorens (dllorens@uji.es)
          (c) Universitat Jaume I 2018

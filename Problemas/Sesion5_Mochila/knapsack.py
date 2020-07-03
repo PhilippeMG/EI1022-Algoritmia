@@ -16,6 +16,7 @@ def knapsack_solve(weights, values, capacity):
             return self.n == len(weights)
 
         def get_solution(self) -> Solution: # IMPLEMENTAR
+            #print(self.current_weight,"",self.current_value)
             return self.solution
 
         def successors(self) -> Iterable["KnapsackPS"]:# IMPLEMENTAR
@@ -23,8 +24,7 @@ def knapsack_solve(weights, values, capacity):
                 if self.current_weight+weights[self.n]<=capacity:
                     yield KnapsackPS(self.solution+(1,),self.current_weight+weights[self.n],self.current_value + values[self.n])
 
-                yield KnapsackPS(self.solution+(0, ), self.current_weight + weights[self.n],
-                                 self.current_value + values[self.n])
+                yield KnapsackPS(self.solution+(0, ), self.current_weight, self.current_value)
 
             pass
 
@@ -47,8 +47,9 @@ def create_knapsack_problem(num_objects: int) -> Tuple[Tuple[int,...], Tuple[int
 
 # Programa principal ------------------------------------------
 if __name__ == "__main__":
-    W, V, C = [1, 4, 2, 3], [2, 3, 4, 2], 7     # SOLUCIÓN: Weight=7,    Value=9
-    # W, V, C = create_knapsack_problem(30)     # SOLUCIÓN: Weight=6313, Value=11824
+    W, V, C = [1, 4, 3, 2], [2, 3, 2, 4], 7
+    #W, V, C = [1, 4, 2, 3], [2, 3, 4, 2], 7     # SOLUCIÓN: Weight=7,    Value=9
+    W, V, C = create_knapsack_problem(30)     # SOLUCIÓN: Weight=6313, Value=11824
     for sol in knapsack_solve(W, V, C):
         print (sol)
     print("\n<TERMINADO>")

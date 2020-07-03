@@ -62,8 +62,8 @@ class SudokuPS(PartialSolution):
     def successors(self) -> Iterable["SudokuPS"]:
         if len(self.vacias)>0:
             mejor_posible=None
-            for f, c in self.vacias:
-                posibles =posibles_en(self.s ,f,c)
+            for f, c in self.vacias: #tupla[f,c] Obtenemos la que tiene menos combinaciones posibles
+                posibles =posibles_en(self.s ,f,c)#los numero posibles en esta posicion
                 if mejor_posible is None or len(posibles) <len(mejor_posible):
                     mejor_posible=posibles
                     f_mejor, c_mejor= f,c

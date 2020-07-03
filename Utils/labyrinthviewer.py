@@ -2,7 +2,7 @@
 2018-10-04: Version 1.4 add_marked_cell con parametro fillCell=False
             fillCell == False: Por defecto. La marca es un círculo de borde negro más pequeño que la celda
             fillCell == True: La marca rellena completamente la celda
-2018-09-22: Version 1.3 (from typing import *)
+2018-09-22.txt: Version 1.3 (from typing import *)
 2016-09-28: Versión 1.2
 2015-10-05: Versión 1.1
 2012-10-03: Version 1

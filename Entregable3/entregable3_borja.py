@@ -1,3 +1,4 @@
+
 from typing import *
 from Utils.bt_scheme import PartialSolution, BacktrackingSolver, Solution
 import sys
@@ -86,9 +87,8 @@ def factible(dic, lista_palabras, solucion):
             acarreo = int(str(suma_col)[:-1])  # Magia
             suma_col = int(str(suma_col)[-1])  # Más magia
 
-        if suma_col != dic[solucion[-i]] or (acarreo != 0 and i == len(solucion)):
+        if suma_col != dic[solucion[-i]]:
             return False
-
 
     if acarreo != 0 and acarreo != dic[solucion[0]]: # Si hay acarreo y no coincide con la primera letra de la solución -> False
         return False
@@ -174,7 +174,6 @@ if __name__ == '__main__':
 
         cadena = formato(word_list, word_solution)
         print(cadena, end="")
-        print(soluciones)
         print(filter_solutions(soluciones))
     else:
         print("ERROR: Incorrect parameters.")

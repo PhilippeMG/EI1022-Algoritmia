@@ -10,8 +10,9 @@ def coin_change_iter(v: List[int], w: List[int], Q: int) -> Tuple[float, List[in
             mem[q, n] = infinity, ()
             for i in range(q//v[n-1] + 1):
                 q_previo, n_previo = q-i*v[n-1], n-1
+                print(mem[q_previo, n_previo][0])
                 mem[q, n] = min(mem[q,n], (mem[q_previo, n_previo][0] + i*w[n-1], (q_previo, n_previo, i)))
-
+                print("-")
     weight = mem[Q, len(v)][0]
     sol = []
     q, n = Q, len(v)

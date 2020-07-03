@@ -1,6 +1,6 @@
 from random import randint, seed
 from typing import *
-from EI1022.Utils.bab_scheme import BabPartialSolution, BabSolver, Solution
+from Utils.bab_scheme import BabPartialSolution, BabSolver, Solution
 
 
 #  IMPORTANTE:
